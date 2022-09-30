@@ -1,0 +1,33 @@
+﻿  check.cpp
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\alloc.h(29,1): warning C4267: '=': conversion from 'size_t' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\alloc.h(25): message : while compiling class template member function '_Tp *simple_alloc<_Tp>::uninitialized_fill_n(_Tp *,size_t,size_t)'
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\vector.h(55): message : see reference to function template instantiation '_Tp *simple_alloc<_Tp>::uninitialized_fill_n(_Tp *,size_t,size_t)' being compiled
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\vector.h(55): message : see reference to class template instantiation 'simple_alloc<_Tp>' being compiled
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\vector.h(53): message : while compiling class template member function 'vector<int>::vector(size_t,const _Tp &)'
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\check.cpp(10): message : see reference to function template instantiation 'vector<int>::vector(size_t,const _Tp &)' being compiled
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\SimpleSTL\check.cpp(10): message : see reference to class template instantiation 'vector<int>' being compiled
+  SimpleSTL.vcxproj -> C:\Users\LuJinfan\OneDrive - mails.tsinghua.edu.cn\otherwise\SimpleSTL\x64\Debug\SimpleSTL.exe
