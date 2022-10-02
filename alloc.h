@@ -1,9 +1,13 @@
 #pragma once
 #include <cstdlib> 
+#include <memory>
 
 template <class _Tp>
 class simple_alloc
 {
+private : 
+    static std::allocator<_Tp> _alloc;
+
 public:
     static _Tp* allocate(size_t __n)
     {
@@ -21,14 +25,17 @@ public:
     {
         std::free(__p);
     }
-    static _Tp* uninitialized_fill_n(_Tp* _M_start, size_t __n, size_t __value)
+    static _Tp* uninitialized_fill_n(_Tp* start, size_t __n, _Tp __value)
     {
-        _Tp* _M_end = _M_start;
+        _Tp* finish = start;
         for (size_t i = 0; i < __n; ++i)
         {
-            *_M_end = __value;
-            ++_M_end;
+            *finish = __value;
+            ++ finish;
         }
-        return _M_end;
+        return finish;
     }
+
+    static void destroy(const _Tp* __p) { _alloc.destroy(__p); }
+    static void destroy(const _Tp* _start, const _Tp* _end) { _alloc.destroy(_start, _end); }
 };
